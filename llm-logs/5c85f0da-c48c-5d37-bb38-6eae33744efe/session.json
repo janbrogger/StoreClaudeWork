@@ -1,0 +1,24 @@
+{
+  "session_id": "5c85f0da-c48c-5d37-bb38-6eae33744efe",
+  "start_utc": "2026-09-30T06:56:21.568Z",
+  "last_event_utc": "2026-09-30T07:01:33.713Z",
+  "span": "5 min",
+  "prompts": 1,
+  "models": [
+    "claude-opus-5-5"
+  ],
+  "tool_use_counts": {
+    "Bash": 19,
+    "Agent": 1,
+    "Write": 1
+  },
+  "claude_code_version": "2.1.285",
+  "git_branch": "HEAD",
+  "user": "jan@brogger.no",
+  "source": "claude-code-remote",
+  "topic": "template setup: LLM log archive, Doorstop, CLAUDE.md",
+  "transcript_files": [
+    "transcript.jsonl"
+  ],
+  "transcript_bytes": 885840
+}
