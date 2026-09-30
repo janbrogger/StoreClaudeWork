@@ -1,0 +1,11 @@
+active: true
+derived: false
+header: |
+  Traceable engineering
+level: 1.2
+links: []
+normative: true
+ref: ''
+reviewed: li33Jj5d0u4cjsmeibjrs8AGE1XflRM9Cmvs7alPTnY=
+text: |
+  Maintainers and reviewers need to trace every intended behaviour of the software from the stakeholder need, through a testable requirement and its design, to the automated test that proves it - so that code written quickly with an LLM is still specified, reviewable and verifiable.

@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  setup.sh, the SessionStart hook and CI
+level: 1.3
+links:
+- REQ003: s5jnSzBy7aJr91dL47_DYfj9kqmjk7sRPoqXQ4etjtw=
+normative: true
+ref: ''
+reviewed: jmm7m7ztIOERTpbqJhClzl0B43ygGsphcFrntNrt7Tw=
+text: |
+  **Implements** REQ003. `setup.sh` creates `.venv` with the interpreter in `$PYTHON` (default `python3`), installs `requirements-dev.txt` (Doorstop pinned to 3.2, pytest, PyYAML), makes the hooks executable, runs `doorstop` and `llmlog.py index`. `.gitignore` excludes `.venv/`. `.claude/hooks/session-start.sh` runs `setup.sh` when `CLAUDE_CODE_REMOTE` is `true`. `.github/workflows/tests.yml` runs `setup.sh` and `pytest` on every push and pull request.

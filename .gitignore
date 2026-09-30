@@ -1,0 +1,27 @@
+# Python virtual environment with Doorstop and pytest (recreate with ./setup.sh)
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+
+# Session-start hook cache (downloads for Claude Code on the web)
+.cache/
+
+# Doorstop / editor scratch
+docs/traceability/**/*.bak
+.doorstop-cache/
+
+# Doorstop HTML publish output (regenerate: .venv/bin/doorstop publish all docs/traceability/published/html)
+docs/traceability/published/html/
+
+# Local Claude Code settings (per-user permissions); .claude/settings.json IS committed
+.claude/settings.local.json
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

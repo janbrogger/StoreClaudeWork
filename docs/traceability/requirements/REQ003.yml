@@ -1,0 +1,13 @@
+active: true
+derived: false
+header: |
+  Reproducible development environment
+level: 1.3
+links:
+- NEED001: A1g91FRcdc5Mob4EwIPU2OGWFANOFDErKR6lN3c54Hc=
+- NEED002: li33Jj5d0u4cjsmeibjrs8AGE1XflRM9Cmvs7alPTnY=
+normative: true
+ref: ''
+reviewed: hC9vZcUp5sWY6z3iBh2kBG_vJWsDBc2GExiV50BWPuo=
+text: |
+  A single command (`./setup.sh`) on a fresh clone shall create a gitignored Python virtual environment `.venv` holding the pinned development tools (Doorstop, pytest), validate the traceability tree and rebuild the LLM log index. Claude Code on the web shall run it automatically at session start, and continuous integration shall run it and the test suite on every push.

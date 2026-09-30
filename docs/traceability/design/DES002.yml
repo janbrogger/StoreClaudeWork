@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Doorstop tree and its automated checks
+level: 1.2
+links:
+- REQ002: 5bTFtcOHtErAufMX02u0FPq1gutlP5hpIGBiPsXqzpw=
+normative: true
+ref: ''
+reviewed: speTcBKcWnDBoT5FnTlHwoT8_wHWzp6mcFgYLj8D0Uk=
+text: |
+  **Implements** REQ002. Four Doorstop documents with `digits: 3`, empty separator and YAML items: `needs/` (NEED, root), `requirements/` (REQ, parent NEED), `design/` (DES, parent REQ), `tests/` (TST, parent DES). `tools/publish_traceability.sh` validates the tree and writes `docs/traceability/published/{NEED,REQ,DES,TST}.md`. `tests/test_traceability.py` loads the item YAML directly and checks the link rules of REQ002, runs `doorstop` and compares a fresh publish with the committed Markdown. HTML output is gitignored.

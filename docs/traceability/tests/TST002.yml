@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Traceability chain validation
+level: 1.2
+links:
+- DES002: Q-x2S0N5E9TLV8CFcb9-Uj_UjZwdiI-awxKEwC9KJx4=
+normative: true
+ref: ''
+reviewed: keLeaFY3Q5JInOIKV5N3xxn4uoyo31s4KQJX9teY790=
+text: |
+  `tests/test_traceability.py`: `doorstop` validation passes; every active normative REQ links to a NEED and is implemented by a DES; every DES links to a REQ, has text and is covered by a TST; every REQ is covered by a TST through its DES; the committed `published/*.md` equal a fresh publish.

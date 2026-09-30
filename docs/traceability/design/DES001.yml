@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  LLM session archive: hooks around llm-logs/tools/llmlog.py
+level: 1.1
+links:
+- REQ001: O83GMU0FdzDWi3kpabTynb3CfvvZ5WjYOhnhUmQBIXY=
+normative: true
+ref: ''
+reviewed: Rb5Xt2qy92yFhBVRofWeDoPUm8gA5pUi8V60m42nhng=
+text: |
+  **Implements** REQ001. `.claude/settings.json` registers four Claude Code hooks, each a one-line wrapper in `.claude/hooks/` around the single script `llm-logs/tools/llmlog.py`: `SessionStart` -> `session-start` (row in `sessions.csv`), `UserPromptSubmit` -> `prompt` (row in `prompt-log.csv`; system-injected turns starting with `<` are skipped), `Stop` -> `archive` (copy the transcript to `llm-logs/<id>/transcript.jsonl`, or `transcript.resumed.jsonl` if a larger archive already exists; regenerate `session.json`, `prompts.csv`, `PROMPTS-AND-RESPONSES.md` and `SESSIONS.md`; `git add llm-logs`), `SessionEnd` -> `archive` then `commit` (`git commit -o llm-logs` and push to the current branch). The script finds the repository from its own location, needs only Python 3 and git, catches every exception and always exits 0. `index` rebuilds all generated files from the archived transcripts; `archive --session-id --transcript` archives a session by hand when the hooks did not run.

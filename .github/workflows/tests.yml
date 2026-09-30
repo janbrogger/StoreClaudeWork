@@ -1,0 +1,33 @@
+# Test suite on every push and pull request (REQ003, DES003, TST003):
+# fresh clone -> ./setup.sh (.venv, Doorstop validation, LLM log index) -> pytest.
+name: tests
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Setup (fresh clone)
+        run: PYTHON=python ./setup.sh
+
+      - name: pytest
+        run: .venv/bin/pytest

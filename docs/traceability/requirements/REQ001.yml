@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Automatic archive of every LLM session
+level: 1.1
+links:
+- NEED001: A1g91FRcdc5Mob4EwIPU2OGWFANOFDErKR6lN3c54Hc=
+normative: true
+ref: ''
+reviewed: DwBSiAQ47NVxGxHpJV2trk8Zk-fXgoT5eL5KuQj17b0=
+text: |
+  Every Claude Code session run in the repository shall be archived without manual action into `llm-logs/<session_id>/`: the full transcript, every human prompt verbatim, and a human-readable file of prompts and the assistant's replies. Every session shall be indexed in `llm-logs/sessions.csv`, every prompt shall be logged in `llm-logs/prompt-log.csv` when it is submitted, and at session end the archive shall be committed and pushed in a commit that contains nothing but `llm-logs/`. A failure of the archiving shall never block the session.

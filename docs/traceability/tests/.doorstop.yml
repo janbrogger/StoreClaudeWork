@@ -1,0 +1,6 @@
+settings:
+  digits: '3'
+  itemformat: yaml
+  parent: DES
+  prefix: TST
+  sep: ''

@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Development environment
+level: 1.3
+links:
+- DES003: P4gUjAFA-gWNhrYR8vCCE3DEDdUR2YeQMoPShhLw6b8=
+normative: true
+ref: ''
+reviewed: QA_ccljf4fvgLA1AD4SY1ZClpB1JEspEdwlEGCWy9cE=
+text: |
+  `tests/test_environment.py`: `.venv` is gitignored; `requirements-dev.txt` pins Doorstop; `setup.sh` and the hook scripts are executable; the SessionStart hook calls `setup.sh`. CI (`.github/workflows/tests.yml`) runs `setup.sh` and the whole suite on a fresh clone, which is the end-to-end form of this test.

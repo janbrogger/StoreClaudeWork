@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Requirements traceability chain
+level: 1.2
+links:
+- NEED002: li33Jj5d0u4cjsmeibjrs8AGE1XflRM9Cmvs7alPTnY=
+normative: true
+ref: ''
+reviewed: TVYdhWUz5rjn5TTzweMT16nEa8qEYomin1HhXomL9ik=
+text: |
+  Intended behaviour shall be documented as a Doorstop chain NEED -> REQ -> DES -> TST under `docs/traceability/`. Every active normative REQ shall link to a NEED and be implemented by a DES item, every DES shall be verified by a TST item, Doorstop validation shall pass, and committed Markdown copies of the four documents shall match a fresh publish. The test suite shall check all of this automatically.

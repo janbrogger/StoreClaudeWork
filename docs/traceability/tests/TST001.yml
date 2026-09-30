@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  LLM log integrity
+level: 1.1
+links:
+- DES001: kgxtYhUBiIBGz8dZZIUJJ1L9f2Ghs-3z4D1N8jVP9OY=
+normative: true
+ref: ''
+reviewed: my3GgF8ru9uuULstU5sauRFqiN1LH8E9788sGvZVnN4=
+text: |
+  `tests/test_llm_logs.py`: every archived session folder is listed in `sessions.csv` and holds `session.json`, `prompts.csv` and `PROMPTS-AND-RESPONSES.md`; `llmlog.py index` runs without error; `.claude/settings.json` registers the four hooks and each hook script exists; `llmlog.py archive` on a synthetic transcript in a temporary copy of the log produces the session files, with the prompt verbatim and the reply included, and skips system-injected turns.
