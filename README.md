@@ -19,6 +19,10 @@ template" on GitHub) gets, with no further setup:
 4. **CI**: `.github/workflows/tests.yml` runs `./setup.sh` and `pytest` on
    every push.
 
+**Claude Code only.** Other agents (Codex, Cursor, Gemini CLI) are neither
+logged nor read `CLAUDE.md`; support for them is tracked in
+[issue #1](https://github.com/janbrogger/StoreClaudeWork/issues/1).
+
 The mechanism was first built in
 [CwellEEGRead](https://github.com/janbrogger/CwellEEGRead) and extracted here.
 

@@ -2,10 +2,10 @@
 # Session `5c85f0da-c48c-5d37-bb38-6eae33744efe`
 
 - Started (UTC): 2026-09-30T06:56:21.568Z  
-- Last event (UTC): 2026-09-30T07:01:33.713Z (span 5 min)  
+- Last event (UTC): 2026-09-30T07:07:59.013Z (span 11 min)  
 - User: jan@brogger.no; source: claude-code-remote; branch: `HEAD`  
 - Models: claude-opus-5-5; Claude Code 2.1.285  
-- Prompts: 1; transcript: transcript.jsonl (0.9 MB)
+- Prompts: 3; transcript: transcript.jsonl (1.1 MB)
 
 This file is derived from the transcript for readers without an LLM. Prompts are verbatim; responses are the assistant's text messages (tool calls and their output are only summarised - see the JSONL for those).
 
@@ -56,4 +56,110 @@ Scaffold committed. Now archiving this session into `llm-logs/` by hand, since t
 **[07:01 UTC]**
 
 Archive works and all 16 tests pass now that a session exists. Setting the session topic and pushing.
+
+**[07:01 UTC]**
+
+The logging system, Doorstop and the new `CLAUDE.md` are now on `main` in janbrogger/StoreClaudeWork, pushed in two commits. All 16 tests pass locally. CI hasn't run on GitHub yet; it will on the next push.
+
+**What's in the template:**
+- **Automatic session logging:** the hooks and `llmlog.py` from CwellEEGRead are copied over, so every Claude session is saved into `llm-logs/<session_id>/` and committed at session end. That commit contains only `llm-logs/`. I made one change: the script now finds the repo from its own location. That lets you archive a session by hand even when Claude was started outside the repo.
+- **Doorstop in a gitignored `.venv`:** `./setup.sh` creates the `.venv` with Doorstop 3.2 and pytest. On Claude Code on the web, a start-of-session hook runs it automatically. The NEED → REQ → DES → TST chain is in `docs/traceability/`. I seeded it with items describing the template's own features (the logging, the chain itself, the setup), so it isn't empty and shows the format.
+- **Tests and CI:** the tests check that every session folder is complete, that a sample session archives correctly, and that the traceability chain has no gaps. A GitHub Actions workflow runs `setup.sh` and pytest on every push.
+- **`CLAUDE.md`:**
+  - A two-sentence note on the automatic logging.
+  - A longer section telling Claude to ask about the need, requirements, design and tests (briefly, without blocking small tasks), and to add a REQ, a DES, a TST and the actual test with any substantial code.
+  - The GitHub issues rule: `bug` issues for known bugs and `feature` issues for ideas that come up. Claude searches for duplicates first and files only in this repo's own `origin`. That last rule comes from a reported Claude Code bug where issues were filed in the wrong repository ([anthropics/claude-code#13797](https://github.com/anthropics/claude-code/issues/13797)).
+
+**Two things to know:**
+- **This session was logged by hand.** It started in the parent folder holding both repos, so neither repo's hooks ran. I archived it into `llm-logs/` manually. It is missing this final reply and records the branch as `HEAD`. Future sessions started in the repo root will be logged automatically; you can check with `/hooks`.
+- **New repos inherit this session's log.** It documents how the template was built; the README says it can be deleted in a new repo's first commit.
+
+**To finish:** tick **Settings → Template repository** on GitHub. I couldn't do that from here.
+
+**What others have built** (the full survey is in `docs/research/prior-art.md`; paper summaries there come from search snippets, because arXiv was blocked):
+- **Saving transcripts:** SpecStory (`.specstory/history/`), Aider's chat history file, turbocommit (puts the transcript in commit messages), Git Prompt Story and git-ai (store it in git notes), Entire (a hidden branch), and the Agent Trace format.
+- **Spec-driven development:** GitHub Spec Kit, Kiro (requirements, design and tasks files), BMAD, Tessl and Agent OS. The closest to Doorstop-style traceability are OpenFastTrace AI Skills and C5-DEC, which uses Doorstop with LLMs.
+- **Agents filing issues:** rdmolony's sync-claude-code-with-github-issues is the closest match, but it relies on instructions alone, and its author notes that makes it unreliable. Copilot and claude-code-action also create or triage issues.
+- **Research:** the closest match is an Idaho National Laboratory paper (arXiv 2605.17675) on session logs linked to issues under strict quality assurance. Others are PROV-AGENT, JOSS's AI disclosure policy and TRIPOD-LLM.
+
+Nothing found combines all three of your pieces: logging enforced by hooks, full transcripts as ordinary files in the repo, and an agent writing into a Doorstop chain with a test level.
+
+Ideas worth borrowing:
+- Automatic removal of secrets and personal data before a transcript is committed, as Git Prompt Story does.
+- An `AGENTS.md` copy of `CLAUDE.md`, so Codex, Cursor and Gemini follow the same rules.
+- `Assisted-by:` commit trailers.
+
+
+## Prompt 2 - 2026-09-30 07:05:20 UTC
+
+```text
+Will this system work for codex, cursor and gemini? The hooks are claude-specific?
+```
+
+_Tools used in this turn: WebFetch ×6, WebSearch ×4, ToolSearch ×1_
+
+### Response 2
+
+**[07:06 UTC]**
+
+Here's what I found after checking each tool's hook documentation.
+
+**Short answer: partly.** The Doorstop chain, the tests, CI and `setup.sh` don't depend on the agent, so they work with any of them (and with humans). The automatic logging and the `CLAUDE.md` instructions are Claude-specific as the repo stands now. Codex, Cursor and Gemini CLI all have hook systems close enough that the logging can be extended to them.
+
+**Hooks: each tool has the events we need**
+
+| | Claude Code (now) | Codex CLI | Gemini CLI | Cursor |
+|---|---|---|---|---|
+| Config file in the repo | `.claude/settings.json` | `.codex/hooks.json` | `.gemini/settings.json` | `.cursor/hooks.json` |
+| Session start | `SessionStart` | `SessionStart` | `SessionStart` | `sessionStart` |
+| Prompt submitted | `UserPromptSubmit` | `UserPromptSubmit` | `BeforeAgent` | `beforeSubmitPrompt` |
+| End of each reply | `Stop` | `Stop` | `AfterAgent` | `stop` |
+| Session end | `SessionEnd` | `SessionEnd` | `SessionEnd` | `sessionEnd` (not in Cloud Agents) |
+| Gives the transcript file path | yes | yes | yes | yes (empty if transcripts are turned off) |
+
+Two catches on the other tools:
+- Codex only loads hooks from the repo once you have marked the project as trusted.
+- Cursor Cloud Agents have no session-end event, so the commit would have to happen at the end of each reply instead.
+
+**What would break in `llmlog.py`**
+1. **Reading the transcript.** It understands only Claude's transcript format. With another agent it would still copy the raw transcript. But `prompts.csv` and `PROMPTS-AND-RESPONSES.md` would come out empty or wrong, because each tool saves its transcript in a different format. Each tool needs its own small parser.
+2. **Hook input fields.** The script expects `session_id`, `transcript_path` and `prompt`. Cursor names the session `conversation_id`, and the other tools' prompt fields may differ; that needs checking.
+3. **Recording which agent ran.** Nothing in the index says which agent a session used; the `source` column only records Claude Code local vs. cloud. An `agent` column is needed.
+
+The hook wrapper scripts themselves are fine. They fall back to the git repo root when `$CLAUDE_PROJECT_DIR` isn't set.
+
+**Instructions: `CLAUDE.md` is read only by Claude**
+- Codex and Cursor read `AGENTS.md`.
+- Gemini CLI reads `GEMINI.md` by default; one setting in `.gemini/settings.json` makes it read `AGENTS.md` too.
+- The usual fix is to move the rules into `AGENTS.md` and reduce `CLAUDE.md` to a line that imports it (`@AGENTS.md`), so there is one copy of the rules. Filing GitHub issues also needs the agent to have the `gh` CLI or a GitHub connector.
+
+**Proposed change (not done yet):**
+- Move the rules to `AGENTS.md` and have `CLAUDE.md` import it.
+- Add `.codex/hooks.json`, `.gemini/settings.json` and `.cursor/hooks.json`, all calling the same `llmlog.py` with an `--agent` flag.
+- Give `llmlog.py` one transcript parser per agent and add the `agent` column.
+- Add a REQ/DES/TST for this, with tests on sample transcripts.
+
+None of these agents is installed here, so I can't test them. The parsers would be written from the published formats. Each one should be confirmed with one real session in that tool before you rely on it. Shall I go ahead?
+
+Sources:
+- [Codex hooks (OpenAI docs)](https://developers.openai.com/codex/hooks), [Codex config reference](https://developers.openai.com/codex/config-reference), [openai/codex#20603](https://github.com/openai/codex/issues/20603), [openai/codex#27133](https://github.com/openai/codex/issues/27133)
+- [Gemini CLI hooks reference](https://github.com/google-gemini/gemini-cli/blob/main/docs/hooks/reference.md), [Writing Gemini CLI hooks](https://github.com/google-gemini/gemini-cli/blob/main/docs/hooks/writing-hooks.md)
+- [Cursor hooks docs](https://cursor.com/docs/hooks), [TrueFoundry: Cursor hooks](https://www.truefoundry.com/docs/platform/cursor-hooks)
+
+The OpenAI and Cursor sites were blocked from this container, so the Codex and Cursor details come from search results, not the full pages. The Gemini details come from its GitHub docs, which I read directly.
+
+
+## Prompt 3 - 2026-09-30 07:07:36 UTC
+
+```text
+No, just make it a claude only repo for now.
+```
+
+_Tools used in this turn: ToolSearch ×1, mcp__github__search_issues ×1, mcp__github__issue_write ×1, Bash ×1_
+
+### Response 3
+
+**[07:07 UTC]**
+
+Leaving it Claude-only. Following the repo's own rule for feature ideas that come up in chat, I'll record multi-agent support as a `feature` issue and add one line to the README saying the template is Claude-only.
 

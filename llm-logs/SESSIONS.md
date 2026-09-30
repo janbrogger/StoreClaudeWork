@@ -5,10 +5,12 @@ Every Claude Code session run in this repository is archived here: one folder pe
 
 | Started (UTC) | Topic | Session id | Prompts | Span | Branch | Transcript |
 |---|---|---|---|---|---|---|
-| 2026-09-30 06:56 | template setup: LLM log archive, Doorstop, CLAUDE.md | [`5c85f0da…`](5c85f0da-c48c-5d37-bb38-6eae33744efe/PROMPTS-AND-RESPONSES.md) | 1 | 5 min | `HEAD` | 0.9 MB |
+| 2026-09-30 06:56 | template setup: LLM log archive, Doorstop, CLAUDE.md | [`5c85f0da…`](5c85f0da-c48c-5d37-bb38-6eae33744efe/PROMPTS-AND-RESPONSES.md) | 3 | 11 min | `HEAD` | 1.1 MB |
 
 ## 2026-09-30 - `5c85f0da-c48c-5d37-bb38-6eae33744efe`
 
-Topic: template setup: LLM log archive, Doorstop, CLAUDE.md. Models: claude-opus-5-5. Tools: Bash ×19, Agent ×1, Write ×1.
+Topic: template setup: LLM log archive, Doorstop, CLAUDE.md. Models: claude-opus-5-5. Tools: Bash ×20, WebFetch ×6, WebSearch ×4, ToolSearch ×2, Agent ×1, Write ×1, mcp__github__search_issues ×1, mcp__github__issue_write ×1.
 
 1. 06:56 - Help me copy the system that auto-stores Claude prompts and responses from my public repo https://github.com/janbrogger/CwellEEGRead into this repo. It is supposed to be a template repo, so all my ne…
+2. 07:05 - Will this system work for codex, cursor and gemini? The hooks are claude-specific?
+3. 07:07 - No, just make it a claude only repo for now.
