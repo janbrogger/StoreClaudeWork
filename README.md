@@ -1,68 +1,31 @@
-# StoreClaudeWork - template for LLM-traceable repositories
+# IB conversion table: evidence base
 
-A GitHub **template repository**. A repository created from it ("Use this
-template" on GitHub) gets, with no further setup:
+Evidence for a data-driven op-ed on the Norwegian conversion table for
+International Baccalaureate (IB) Diploma points to Norwegian grade points
+(hearing of 29 Oct 2026, deadline 10 Dec 2026). Thesis under test: Norwegian
+and other Western school grades have inflated while the exam-based IB Diploma
+has stayed stable, and PISA has fallen; the conversion method treats the
+inflated Norwegian distribution as the gold standard.
 
-1. **Automatic LLM provenance.** Every Claude Code session is archived into
-   `llm-logs/<session_id>/` - full transcript, every prompt verbatim, a
-   readable `PROMPTS-AND-RESPONSES.md`, model and tool metadata - indexed in
-   `llm-logs/sessions.csv` and committed (only `llm-logs/`) at session end.
-   Implemented as Claude Code hooks around one dependency-free Python script;
-   see [`llm-logs/README.md`](llm-logs/README.md).
-2. **A requirements traceability chain.** [Doorstop](https://github.com/doorstop-dev/doorstop)
-   documents NEED -> REQ -> DES -> TST in [`docs/traceability/`](docs/traceability/README.md),
-   validated by the test suite, with Doorstop installed in a gitignored `.venv`.
-3. **Agent instructions** in [`CLAUDE.md`](CLAUDE.md) that make Claude steer
-   towards eliciting requirements, design and tests, add REQ/DES/TST items
-   (and the test) along with substantial code, and file GitHub issues for
-   known bugs (`bug`) and feature ideas (`feature`) that come up in a chat.
-4. **CI**: `.github/workflows/tests.yml` runs `./setup.sh` and `pytest` on
-   every push.
+- `sources/SYNTHESIS.md`: the findings in one page, with gaps.
+- `sources/<stream>/REPORT.md`, `*.csv`, `TO-FETCH.md`: one folder per
+  evidence stream (see `sources/README.md`). Numbers come from primary
+  documents where reachable and otherwise from search snippets, flagged as
+  such; nothing is fabricated.
+- `charts/make_chart.py`: the pivotal chart (Norwegian grades up, IB flat,
+  PISA down) from the CSVs alone; outputs `charts/*.png|svg`.
 
-**Claude Code only.** Other agents (Codex, Cursor, Gemini CLI) are neither
-logged nor read `CLAUDE.md`; support for them is tracked in
-[issue #1](https://github.com/janbrogger/StoreClaudeWork/issues/1).
-
-The mechanism was first built in
-[CwellEEGRead](https://github.com/janbrogger/CwellEEGRead) and extracted here.
-
-## Starting a new project from the template
-
-1. On GitHub: **Use this template -> Create a new repository**, then clone it.
-2. `./setup.sh` (Python 3.9+; creates `.venv` with Doorstop and pytest,
-   validates the tree, rebuilds the log index). Claude Code on the web runs
-   it automatically at session start.
-3. Edit the *Purpose* line at the top of `CLAUDE.md` and this README.
-4. Add your project's first needs: `.venv/bin/doorstop add NEED`, then
-   requirements, design and tests - or just ask Claude to help elicit them.
-5. Start Claude Code **in the repository root** so that its hooks load
-   (check with `/hooks`).
-
-The template's own session logs come along in `llm-logs/`; they are the
-provenance of the scaffolding. Delete them in the first commit of the new
-repository if you prefer a clean log. The seed Doorstop items
-(NEED001-002, REQ001-003, ...) describe the template's machinery and stay
-valid in every derived repository.
-
-## Layout
-
-```
-CLAUDE.md                     instructions for Claude Code (read every session)
-.claude/settings.json         hook registration (committed)
-.claude/hooks/                llmlog-*.sh wrappers, session-start.sh (runs setup.sh on the web)
-llm-logs/                     archived sessions + tools/llmlog.py
-docs/traceability/            Doorstop: needs/ requirements/ design/ tests/ published/
-docs/research/prior-art.md    survey of similar tools and papers (2026-09)
-tests/                        pytest: traceability, LLM log and environment checks
-tools/publish_traceability.sh regenerate docs/traceability/published/*.md
-setup.sh, requirements-dev.txt  gitignored .venv with Doorstop 3.2 + pytest
+```bash
+./setup.sh
+.venv/bin/pip install pandas matplotlib
+.venv/bin/python charts/make_chart.py
+.venv/bin/pytest
 ```
 
-## Requirements
+The repository was created from the
+[StoreClaudeWork](https://github.com/janbrogger/StoreClaudeWork) template:
+every Claude Code session is archived in `llm-logs/`, and requirements,
+design and tests are traced with Doorstop in `docs/traceability/`.
 
-Python 3 and git. The logging hooks need nothing else; Doorstop and pytest
-are installed into `.venv` by `./setup.sh`.
-
-## Licence
-
-[Unlicense](LICENSE) - public domain.
+Licence: [Unlicense](LICENSE). Data files keep their sources' licences (noted
+in each `REPORT.md`).

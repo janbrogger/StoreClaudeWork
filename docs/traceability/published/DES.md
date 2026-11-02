@@ -40,7 +40,7 @@
 
 ## 2.2 charts/make_chart.py _(DES005)_ {#DES005}
 
-**Implements** REQ005. `charts/make_chart.py` (pandas + matplotlib, run from `.venv`) reads `sources/ib-statistics/ib_session_stats.csv`, `sources/norway-grades/grunnskolepoeng.csv`, `sources/norway-grades/vgs_grades.csv` and `sources/pisa/pisa_country_year.csv`, indexes each series to a common base year so that different scales can share one panel, and writes `charts/grade_inflation_vs_ib.png` and `.svg`. Series are labelled with their source. Missing files or empty series raise a `SystemExit` with the missing path. Decision: indexing (base year = 100) rather than dual axes, because dual axes let the reader be misled by axis choice.
+**Implements** REQ005. `charts/make_chart.py` (pandas + matplotlib, run from `.venv`) reads `sources/ib-statistics/ib_session_stats.csv`, `sources/norway-grades/grunnskolepoeng.csv`, `sources/norway-grades/vgs_grades.csv` and `sources/pisa/pisa_country_year.csv`, writes three small multiples whose y-axes span the same percentage range around the base year (default 2012, the first year present in all three series) with the 2020-2022 no-exam years shaded, and a second chart that indexes each series to the base year so that different scales can share one panel, and writes `charts/grade_inflation_vs_ib.png` and `.svg`. Series are labelled with their source. Missing files or empty series raise a `SystemExit` with the missing path. Decision: indexing (base year = 100) rather than dual axes, because dual axes let the reader be misled by axis choice.
 
 *Parent links: REQ005*
 

@@ -31,10 +31,13 @@ def test_folder_has_report_and_to_fetch(folder):
     report = folder / "REPORT.md"
     assert report.is_file(), f"{folder.name}/REPORT.md missing"
     assert (folder / "TO-FETCH.md").is_file(), f"{folder.name}/TO-FETCH.md missing"
-    headings = re.findall(r"^#+\s+(.+?)\s*$", report.read_text(encoding="utf-8"), flags=re.M)
+    headings = re.findall(r"^(#+)\s+(.+?)\s*$", report.read_text(encoding="utf-8"), flags=re.M)
     assert headings, f"{folder.name}/REPORT.md has no headings"
-    assert headings[-1].strip().lower().startswith("sources"), (
-        f"{folder.name}/REPORT.md must end with a 'Sources' section, last heading is {headings[-1]!r}")
+    sources = [i for i, (_, h) in enumerate(headings) if h.strip().lower().startswith("sources")]
+    assert sources, f"{folder.name}/REPORT.md has no 'Sources' section"
+    level = len(headings[sources[-1]][0])
+    later = [h for marks, h in headings[sources[-1] + 1:] if len(marks) <= level]
+    assert not later, f"{folder.name}/REPORT.md: 'Sources' must be the last section, but {later} follow it"
 
 
 @pytest.mark.parametrize("path", csv_files(), ids=lambda p: str(p.relative_to(SOURCES)))
