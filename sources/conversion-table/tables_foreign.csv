@@ -1,0 +1,3 @@
+country,ib_points,local_value,local_scale,source_url,note
+Denmark,24,4.4,7-trins-skala (−3..12),https://www.eucsyd.dk/ib-diploma/konvertering-mellem-karakterer/,"From search snippet of EUC Syd's page on the official Danish IB conversion; verify against the ministry table (ufm.dk)"
+Denmark,45,12.7,7-trins-skala (−3..12),https://www.eucsyd.dk/ib-diploma/konvertering-mellem-karakterer/,"From search snippet; value exceeds 12 so the scale/rounding in the official table must be checked"
