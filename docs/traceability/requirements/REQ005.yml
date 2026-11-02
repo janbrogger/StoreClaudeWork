@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Pivotal chart: Norwegian grade inflation versus IB stability
+level: 2.2
+links:
+- NEED003: h7FhP59c-SCysz57jxP0HTPZBD-hUKMnt2vpuZbAo9g=
+normative: true
+ref: ''
+reviewed: EDJQOTSICvhKTYm84g0q7GlK2yy3xqKWi3K940iMTBc=
+text: |
+  The software shall produce, from the CSV files under `sources/` alone, a chart that shows Norwegian grade means over time together with IB Diploma mean total points over time (and PISA for Norway where available), as a PNG and an SVG under `charts/`, with the data source of every series named in the chart, and shall fail with a clear message if a required series is missing.

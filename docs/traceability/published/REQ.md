@@ -3,6 +3,8 @@
     * 1.1 Automatic archive of every LLM session (REQ001)
     * 1.2 Requirements traceability chain (REQ002)
     * 1.3 Reproducible development environment (REQ003)
+    * 2.1 Sources tree: traceable reports and machine-readable data (REQ004)
+    * 2.2 Pivotal chart: Norwegian grade inflation versus IB stability (REQ005)
 
 ## 1.1 Automatic archive of every LLM session _(REQ001)_ {#REQ001}
 
@@ -27,4 +29,20 @@ A single command (`./setup.sh`) on a fresh clone shall create a gitignored Pytho
 *Parent links: NEED001, NEED002*
 
 *Child links: DES003*
+
+## 2.1 Sources tree: traceable reports and machine-readable data _(REQ004)_ {#REQ004}
+
+Every evidence folder under `sources/` shall contain a `REPORT.md` that ends with a `Sources` section and a `TO-FETCH.md`; every `*.csv` under `sources/` shall be UTF-8, comma-separated, with a header row that includes the columns `source_url` and `note`, and shall parse without error. Numbers that could not be traced to a primary document shall be marked as such in the `note` column or in the report rather than omitted silently.
+
+*Parent links: NEED003*
+
+*Child links: DES004*
+
+## 2.2 Pivotal chart: Norwegian grade inflation versus IB stability _(REQ005)_ {#REQ005}
+
+The software shall produce, from the CSV files under `sources/` alone, a chart that shows Norwegian grade means over time together with IB Diploma mean total points over time (and PISA for Norway where available), as a PNG and an SVG under `charts/`, with the data source of every series named in the chart, and shall fail with a clear message if a required series is missing.
+
+*Parent links: NEED003*
+
+*Child links: DES005*
 

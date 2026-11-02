@@ -3,6 +3,8 @@
     * 1.1 LLM session archive: hooks around llm-logs/tools/llmlog.py (DES001)
     * 1.2 Doorstop tree and its automated checks (DES002)
     * 1.3 setup.sh, the SessionStart hook and CI (DES003)
+    * 2.1 Sources tree layout (DES004)
+    * 2.2 charts/make_chart.py (DES005)
 
 ## 1.1 LLM session archive: hooks around llm-logs/tools/llmlog.py _(DES001)_ {#DES001}
 
@@ -27,4 +29,20 @@
 *Parent links: REQ003*
 
 *Child links: TST003*
+
+## 2.1 Sources tree layout _(DES004)_ {#DES004}
+
+**Implements** REQ004. `sources/README.md` defines one folder per evidence stream (`media-and-policy`, `conversion-table`, `norway-grades`, `pisa`, `ib-statistics`, `ib-assessment-design`, `grade-inflation-international`, `papers`). Each folder is filled by a research agent or by hand and holds `REPORT.md` (narrative, verbatim quotes, caveats, final `Sources` section), one or more CSV files (one observation per row, `source_url` and `note` columns), and `TO-FETCH.md` (primary documents still to retrieve). Known limit: the cloud session's network policy blocks most source hosts, so first-pass numbers come from search-engine snippets and must be verified against the primary documents listed in `TO-FETCH.md`.
+
+*Parent links: REQ004*
+
+*Child links: TST004*
+
+## 2.2 charts/make_chart.py _(DES005)_ {#DES005}
+
+**Implements** REQ005. `charts/make_chart.py` (pandas + matplotlib, run from `.venv`) reads `sources/ib-statistics/ib_session_stats.csv`, `sources/norway-grades/grunnskolepoeng.csv`, `sources/norway-grades/vgs_grades.csv` and `sources/pisa/pisa_country_year.csv`, indexes each series to a common base year so that different scales can share one panel, and writes `charts/grade_inflation_vs_ib.png` and `.svg`. Series are labelled with their source. Missing files or empty series raise a `SystemExit` with the missing path. Decision: indexing (base year = 100) rather than dual axes, because dual axes let the reader be misled by axis choice.
+
+*Parent links: REQ005*
+
+*Child links: TST005*
 

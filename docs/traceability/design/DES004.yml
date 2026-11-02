@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Sources tree layout
+level: 2.1
+links:
+- REQ004: 5wY3DVvepof3dP-Crrf-8iOLFtyo5uHD0CFAAxBFb7w=
+normative: true
+ref: ''
+reviewed: zPiVNKETcYGok2cenKLLc87eQBNuQn7ncP2fA7PgcSI=
+text: |
+  **Implements** REQ004. `sources/README.md` defines one folder per evidence stream (`media-and-policy`, `conversion-table`, `norway-grades`, `pisa`, `ib-statistics`, `ib-assessment-design`, `grade-inflation-international`, `papers`). Each folder is filled by a research agent or by hand and holds `REPORT.md` (narrative, verbatim quotes, caveats, final `Sources` section), one or more CSV files (one observation per row, `source_url` and `note` columns), and `TO-FETCH.md` (primary documents still to retrieve). Known limit: the cloud session's network policy blocks most source hosts, so first-pass numbers come from search-engine snippets and must be verified against the primary documents listed in `TO-FETCH.md`.

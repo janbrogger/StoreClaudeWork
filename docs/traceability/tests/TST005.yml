@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Chart generation
+level: 2.2
+links:
+- DES005: 8USaFyIj5rdTL4Wk9JCejds3ucDeGIURgFURVgICBDc=
+normative: true
+ref: ''
+reviewed: Xh1T1W5AdcDqNRQK8fTplAW-fqMC_3VNhM9lEDkBAvE=
+text: |
+  `tests/test_chart.py`: `charts/make_chart.py` runs to completion from the repository root and writes `charts/grade_inflation_vs_ib.png` and `.svg` (skipped, not failed, when the required CSV files are absent); with a required file removed in a temporary copy it exits non-zero and names the missing file. Pass: both assertions hold.

@@ -1,7 +1,10 @@
 # Working conventions for this repository
 
-<!-- Template: replace this line with one or two sentences on what this project is for. -->
-- **Purpose**: _describe the project here_.
+- **Purpose**: evidence base (sourced reports in Markdown, data in CSV under
+  `sources/`) and the pivotal chart (`charts/`) for a data-driven op-ed on the
+  Norwegian conversion table for International Baccalaureate Diploma grades:
+  Norwegian grade inflation versus IB stability, with PISA as the external
+  yardstick. The author writes the op-ed; this repository holds the evidence.
 
 ## LLM provenance (automatic)
 

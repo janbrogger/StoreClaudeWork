@@ -3,6 +3,8 @@
     * 1.1 LLM log integrity (TST001)
     * 1.2 Traceability chain validation (TST002)
     * 1.3 Development environment (TST003)
+    * 2.1 Sources tree integrity (TST004)
+    * 2.2 Chart generation (TST005)
 
 ## 1.1 LLM log integrity _(TST001)_ {#TST001}
 
@@ -21,4 +23,16 @@
 `tests/test_environment.py`: `.venv` is gitignored; `requirements-dev.txt` pins Doorstop; `setup.sh` and the hook scripts are executable; the SessionStart hook calls `setup.sh`. CI (`.github/workflows/tests.yml`) runs `setup.sh` and the whole suite on a fresh clone, which is the end-to-end form of this test.
 
 *Parent links: DES003*
+
+## 2.1 Sources tree integrity _(TST004)_ {#TST004}
+
+`tests/test_sources.py`: for every evidence folder under `sources/` (except `papers/`) that contains any file, `REPORT.md` exists and its last heading is `Sources`, and `TO-FETCH.md` exists; every `*.csv` under `sources/` parses with the csv module, has `source_url` and `note` in its header, and every row has the header's number of fields. Pass: all assertions hold.
+
+*Parent links: DES004*
+
+## 2.2 Chart generation _(TST005)_ {#TST005}
+
+`tests/test_chart.py`: `charts/make_chart.py` runs to completion from the repository root and writes `charts/grade_inflation_vs_ib.png` and `.svg` (skipped, not failed, when the required CSV files are absent); with a required file removed in a temporary copy it exits non-zero and names the missing file. Pass: both assertions hold.
+
+*Parent links: DES005*
 

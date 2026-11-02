@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Sources tree integrity
+level: 2.1
+links:
+- DES004: XMl1l6dKmes_9aZlk9K64GLEx78cJbIxR46sFKRLbBM=
+normative: true
+ref: ''
+reviewed: VMzhOKkAEg-a5Txr9ysI6kIQTI-KMD0VL6ytkx4s9lA=
+text: |
+  `tests/test_sources.py`: for every evidence folder under `sources/` (except `papers/`) that contains any file, `REPORT.md` exists and its last heading is `Sources`, and `TO-FETCH.md` exists; every `*.csv` under `sources/` parses with the csv module, has `source_url` and `note` in its header, and every row has the header's number of fields. Pass: all assertions hold.

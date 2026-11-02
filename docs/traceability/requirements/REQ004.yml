@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Sources tree: traceable reports and machine-readable data
+level: 2.1
+links:
+- NEED003: h7FhP59c-SCysz57jxP0HTPZBD-hUKMnt2vpuZbAo9g=
+normative: true
+ref: ''
+reviewed: VE5FZvcDk8gb0TlQQ0vUtDnEU4_lZYaR5bbk9QEQb2k=
+text: |
+  Every evidence folder under `sources/` shall contain a `REPORT.md` that ends with a `Sources` section and a `TO-FETCH.md`; every `*.csv` under `sources/` shall be UTF-8, comma-separated, with a header row that includes the columns `source_url` and `note`, and shall parse without error. Numbers that could not be traced to a primary document shall be marked as such in the `note` column or in the report rather than omitted silently.
