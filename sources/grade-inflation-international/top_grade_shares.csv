@@ -1,0 +1,95 @@
+country,qualification,year,statistic,value,source_url,note
+UK,A level (UK-wide JCQ),2019,share_A_star_A_pct,25.4,https://www.expressandstar.com/uk-news/a-level-results-key-numbers-and-trends-8917571,"PA/JCQ comparison figure; gov.uk England-only guide gives 25.2 for England 2019"
+England,A level,2019,share_A_star_A_pct,25.2,https://www.gov.uk/government/news/guide-to-as-and-a-level-results-for-england-2021,England only (Ofqual guide 2021)
+England,A level,2020,share_A_star_A_pct,38.1,https://www.gov.uk/government/news/guide-to-as-and-a-level-results-for-england-2021,"Centre-assessed grades after the August 2020 U-turn; the withdrawn algorithm had produced 27.6 (schoolsweek.co.uk/top-results-at-a-level-almost-double-under-new-system)"
+England,A level,2021,share_A_star_A_pct,44.3,https://www.gov.uk/government/news/guide-to-as-and-a-level-results-for-england-2021,Teacher-assessed grades; England only
+UK,A level (UK-wide JCQ),2021,share_A_star_A_pct,44.8,https://www.expressandstar.com/uk-news/a-level-results-key-numbers-and-trends-8917571,UK-wide peak (teacher-assessed grades)
+UK,A level (UK-wide JCQ),2022,share_A_star_A_pct,36.4,https://www.expressandstar.com/uk-news/a-level-results-key-numbers-and-trends-8917571,"Transition year, grading set midway between 2019 and 2021"
+UK,A level (UK-wide JCQ),2023,share_A_star_A_pct,27.2,https://www.gov.uk/government/publications/infographic-a-level-results-2023/infographics-for-a-level-results-2023-accessible,Return to 2019 standards (comparable outcomes)
+UK,A level (UK-wide JCQ),2024,share_A_star_A_pct,27.8,https://www.gov.uk/government/publications/infographic-a-level-results-2024/infographics-for-a-level-results-2024-accessible,"2.4 points above 2019"
+UK,A level (UK-wide JCQ),2025,share_A_star_A_pct,28.3,https://studycardsai.com/blog/a-level-results-statistics,Secondary blog citing JCQ; verify against JCQ release
+UK,A level (UK-wide JCQ),2026,share_A_star_A_pct,28.5,https://studycardsai.com/blog/a-level-results-statistics,Secondary blog citing JCQ; verify against JCQ release
+UK,A level,1980,share_A_pct,8.8,https://www.tes.com/magazine/archive/grade-success,"Share of papers awarded grade A (pre-A*); TES"
+UK,A level,2000,share_A_pct,17.6,https://www.tes.com/magazine/archive/grade-success,"Share of papers awarded grade A; TES"
+England,A level,2010,share_A_star_pct,8.1,https://schoolsweek.co.uk/a-level-results-a-grades-in-england-slump-to-lowest-level-since-2013,A* introduced 2010
+England,A level,2013,share_A_star_pct,7.7,https://schoolsweek.co.uk/a-level-results-a-grades-in-england-slump-to-lowest-level-since-2013,
+England,A level,2014,share_A_star_pct,8.6,https://gov.je/education/schools/childlearning/pages/examresults.aspx,Jersey government comparison table (England row)
+England,A level,2014,share_A_pct,18.1,https://gov.je/education/schools/childlearning/pages/examresults.aspx,Grade A only (not A*)
+England,A level,2018,share_A_star_pct,8.0,https://schoolsweek.co.uk/a-level-results-a-grades-in-england-slump-to-lowest-level-since-2013,
+England,A level,2018,share_A_pct,18.2,https://gov.je/education/schools/childlearning/pages/examresults.aspx,Grade A only (not A*)
+England,A level,2019,share_A_star_pct,7.7,https://feweek.co.uk/top-results-at-a-level-almost-double-under-new-system,
+England,A level,2020,share_A_star_pct,14.3,https://feweek.co.uk/top-results-at-a-level-almost-double-under-new-system,Centre-assessed grades
+UK,GCSE (UK-wide JCQ),2019,share_grade7_A_plus_pct,20.8,https://www.expressandstar.com/uk-news/gcse-results-key-numbers-and-trends-8931120,Grade 7/A and above
+UK,GCSE (UK-wide JCQ),2020,share_grade7_A_plus_pct,26.2,https://test1.buckingham.ac.uk/wp-content/uploads/2025/08/GCSE-Prospects-2025.pdf,Centre-assessed grades (Buckingham GCSE Prospects 2025)
+UK,GCSE (UK-wide JCQ),2021,share_grade7_A_plus_pct,28.9,https://test1.buckingham.ac.uk/wp-content/uploads/2025/08/GCSE-Prospects-2025.pdf,Teacher-assessed grades
+UK,GCSE (UK-wide JCQ),2022,share_grade7_A_plus_pct,26.3,https://yorkmix.com/?p=394966,Transition year
+UK,GCSE (UK-wide JCQ),2023,share_grade7_A_plus_pct,22.0,https://www.expressandstar.com/uk-news/gcse-results-key-numbers-and-trends-8931120,Return to 2019 standards
+UK,GCSE (UK-wide JCQ),2024,share_grade7_A_plus_pct,21.8,https://www.expressandstar.com/uk-news/top-gcse-grades-fall-but-remain-above-pre-pandemic-levels-5772718,
+UK,GCSE (UK-wide JCQ),2025,share_grade7_A_plus_pct,21.9,https://www.expressandstar.com/uk-news/gcse-results-key-numbers-and-trends-8931120,
+US,High school (NCES High School Transcript Study),1990,mean_gpa,2.68,https://chalkbeat.org/2022/3/16/22979947/high-school-grades-inflation-federal-naep-test-scores,NAEP HSTS graduates; 4.0 scale
+US,High school (NCES High School Transcript Study),2000,mean_gpa,2.94,https://chalkbeat.org/2022/3/16/22979947/high-school-grades-inflation-federal-naep-test-scores,Chalkbeat citing NCES; only one source gives the 2000 value
+US,High school (NCES High School Transcript Study),2009,mean_gpa,3.00,https://www.k12dive.com/news/10-year-study-gpas-course-rigor-rising-for-high-school-grads/620559/,
+US,High school (NCES High School Transcript Study),2019,mean_gpa,3.11,https://www.k12dive.com/news/10-year-study-gpas-course-rigor-rising-for-high-school-grads/620559/,"NAEP 2019 HSTS; same period NAEP 12th-grade scores flat/declining"
+US,High school (SAT takers; Hurwitz & Lee 2018),1998,mean_gpa,3.27,https://fordhaminstitute.org/national/commentary/high-school-grades-rise-sat-scores-fall,Self-reported GPA of SAT takers
+US,High school (SAT takers; Hurwitz & Lee 2018),2016,mean_gpa,3.38,https://fordhaminstitute.org/national/commentary/high-school-grades-rise-sat-scores-fall,
+US,High school (SAT takers; Hurwitz & Lee 2018),1998,share_A_range_gpa_pct,39,https://www.weforum.org/stories/education-and-skills/theres-an-epidemic-of-grade-inflation-in-american-high-schools/,Share of SAT takers with A-range GPA
+US,High school (SAT takers; Hurwitz & Lee 2018),2016,share_A_range_gpa_pct,47,https://www.weforum.org/stories/education-and-skills/theres-an-epidemic-of-grade-inflation-in-american-high-schools/,
+US,SAT (Hurwitz & Lee 2018),1998,mean_sat_1600,1026,https://www.weforum.org/stories/education-and-skills/theres-an-epidemic-of-grade-inflation-in-american-high-schools/,Average SAT on 1600 scale
+US,SAT (Hurwitz & Lee 2018),2016,mean_sat_1600,1002,https://www.weforum.org/stories/education-and-skills/theres-an-epidemic-of-grade-inflation-in-american-high-schools/,
+US,High school (ACT takers; Sanchez & Moore 2022),2010,mean_gpa,3.17,https://industryinsights.act.org/2022/05/grade-inflation-past-decade,"4.3 million ACT-tested students, 4,700 public high schools"
+US,High school (ACT takers; Sanchez & Moore 2022),2021,mean_gpa,3.36,https://industryinsights.act.org/2022/05/grade-inflation-past-decade,Largest rise 2018-2021
+US,NAEP long-term trend reading age 9,1971,naep_ltt_scale_score,208,https://github.com/ohabot-cu/US-Education-Trends/blob/main/data/reading/NAEP_All.csv,GitHub mirror of NCES NAEP data table
+US,NAEP long-term trend reading age 9,1980,naep_ltt_scale_score,215,https://github.com/ohabot-cu/US-Education-Trends/blob/main/data/reading/NAEP_All.csv,
+US,NAEP long-term trend reading age 9,1990,naep_ltt_scale_score,209,https://github.com/ohabot-cu/US-Education-Trends/blob/main/data/reading/NAEP_All.csv,
+US,NAEP long-term trend reading age 9,1999,naep_ltt_scale_score,212,https://github.com/ohabot-cu/US-Education-Trends/blob/main/data/reading/NAEP_All.csv,
+US,NAEP long-term trend reading age 9,2004,naep_ltt_scale_score,216,https://github.com/ohabot-cu/US-Education-Trends/blob/main/data/reading/NAEP_All.csv,Revised format (219 on original format)
+US,NAEP long-term trend reading age 9,2008,naep_ltt_scale_score,220,https://github.com/ohabot-cu/US-Education-Trends/blob/main/data/reading/NAEP_All.csv,
+US,NAEP long-term trend reading age 9,2012,naep_ltt_scale_score,221,https://github.com/ohabot-cu/US-Education-Trends/blob/main/data/reading/NAEP_All.csv,Peak
+US,NAEP long-term trend reading age 9,2020,naep_ltt_scale_score,220,https://github.com/ohabot-cu/US-Education-Trends/blob/main/data/reading/NAEP_All.csv,
+US,NAEP long-term trend reading age 9,2022,naep_ltt_scale_score,215,https://github.com/ohabot-cu/US-Education-Trends/blob/main/data/reading/NAEP_All.csv,
+US,NAEP long-term trend mathematics age 9,1978,naep_ltt_scale_score,219,https://github.com/ohabot-cu/US-Education-Trends/blob/main/data/mathematics/,"GitHub mirror of NCES NAEP data table (file 'Mathematics, Age 9, All students.csv')"
+US,NAEP long-term trend mathematics age 9,1990,naep_ltt_scale_score,230,https://github.com/ohabot-cu/US-Education-Trends/blob/main/data/mathematics/,
+US,NAEP long-term trend mathematics age 9,1999,naep_ltt_scale_score,232,https://github.com/ohabot-cu/US-Education-Trends/blob/main/data/mathematics/,
+US,NAEP long-term trend mathematics age 9,2004,naep_ltt_scale_score,239,https://github.com/ohabot-cu/US-Education-Trends/blob/main/data/mathematics/,Revised format (241 original format)
+US,NAEP long-term trend mathematics age 9,2008,naep_ltt_scale_score,243,https://github.com/ohabot-cu/US-Education-Trends/blob/main/data/mathematics/,
+US,NAEP long-term trend mathematics age 9,2012,naep_ltt_scale_score,244,https://github.com/ohabot-cu/US-Education-Trends/blob/main/data/mathematics/,Peak
+US,NAEP long-term trend mathematics age 9,2020,naep_ltt_scale_score,241,https://github.com/ohabot-cu/US-Education-Trends/blob/main/data/mathematics/,
+US,NAEP long-term trend mathematics age 9,2022,naep_ltt_scale_score,234,https://github.com/ohabot-cu/US-Education-Trends/blob/main/data/mathematics/,
+Germany,Abitur (national; Profiling Institut compilation of KMK data),2020,share_1.0_pct,2.2,https://www.profiling-institut.de/abiturnoten/,"Approximate (snippet: 'about 2.2%'); dpa gives 2.9% for 2020 on a different base"
+Germany,Abitur (national; Profiling Institut compilation of KMK data),2021,share_1.0_pct,3.4,https://www.profiling-institut.de/abiturnoten/,Peak (Corona years)
+Germany,Abitur (national; Profiling Institut compilation of KMK data),2023,share_1.0_pct,3.1,https://www.profiling-institut.de/abiturnoten/,
+Germany,Abitur (national; Profiling Institut compilation of KMK data),2024,share_1.0_pct,3.1,https://www.profiling-institut.de/abiturnoten/,"c. 9,000 of >370,000 with Hochschulreife had 1,0 (hessenschau)"
+Germany,Abitur (national; Profiling Institut compilation of KMK data),2025,share_1.0_pct,3.1,https://www.profiling-institut.de/abiturnoten/,"8,255 students with 1,0"
+Germany,Abitur (national; Statista from KMK),2006,share_1.0_to_1.9_pct,20.1,https://de.statista.com/infografik/amp/34979/verteilung-der-durchschnittlichen-abitur-noten-in-deutschland,Share of Abitur grades 1.0-1.9
+Germany,Abitur (national; Statista from KMK),2024,share_1.0_to_1.9_pct,30.7,https://de.statista.com/infografik/amp/34979/verteilung-der-durchschnittlichen-abitur-noten-in-deutschland,"Share 1.0-1.9; KMK itself notes 2021/22 peak, lower 2023/24"
+Germany,Abitur (national; Profiling Institut from KMK),2025,mean_abitur_grade,2.35,https://www.profiling-institut.de/abiturnoten/,"Weighted mean of Länder, Baden-Württemberg with prior-year values; best (lowest) averages in 2021 and 2022"
+Germany,Abitur (Schleswig-Holstein),2011,mean_abitur_grade,2.52,https://www.landtag.ltsh.de/infothek/wahl18/drucks/3200/drucksache-18-3257.pdf,State series 2010/11
+Germany,Abitur (Schleswig-Holstein),2012,mean_abitur_grade,2.52,https://www.landtag.ltsh.de/infothek/wahl18/drucks/3200/drucksache-18-3257.pdf,2011/12
+Germany,Abitur (Schleswig-Holstein),2013,mean_abitur_grade,2.54,https://www.landtag.ltsh.de/infothek/wahl18/drucks/3200/drucksache-18-3257.pdf,2012/13
+Germany,Abitur (Schleswig-Holstein),2014,mean_abitur_grade,2.54,https://www.landtag.ltsh.de/infothek/wahl18/drucks/3200/drucksache-18-3257.pdf,2013/14
+Germany,Abitur (Sachsen),2016,mean_abitur_grade,2.29,https://www.bildung.sachsen.de/blog/index.php/wp-json/wp/v2/posts/4544,"Later improved to 2.24 (year not stated in snippet)"
+Denmark,STX exam result incl. bonus A,2010,mean_grade_7point,6.9,https://uvm.dk/-/media/filer/stil/pdf18/181012-tabelnotat-studenternes-eksamensresultater.pdf?la=da,UVM/STIL tabelnotat 2018
+Denmark,STX exam result incl. bonus A,2017,mean_grade_7point,7.4,https://uvm.dk/-/media/filer/stil/pdf18/181012-tabelnotat-studenternes-eksamensresultater.pdf?la=da,
+Denmark,HHX exam result incl. bonus A,2010,mean_grade_7point,6.1,https://uvm.dk/-/media/filer/stil/pdf18/181012-tabelnotat-studenternes-eksamensresultater.pdf?la=da,
+Denmark,HHX exam result incl. bonus A,2017,mean_grade_7point,6.8,https://uvm.dk/-/media/filer/stil/pdf18/181012-tabelnotat-studenternes-eksamensresultater.pdf?la=da,
+Denmark,HTX exam result incl. bonus A,2017,mean_grade_7point,7.5,https://uvm.dk/-/media/filer/stil/pdf18/181012-tabelnotat-studenternes-eksamensresultater.pdf?la=da,Highest of the tracks in 2017; HTX rose 0.9 over 2010-2018 (DST)
+Denmark,STX exam result,2022,mean_grade_7point,7.7,https://www.dst.dk/da/Statistik/udgivelser/bagtal/2022-06-30-studenter-karaktergennemsnit,"Danmarks Statistik: record high; 'only gone one way since 2010, upward'"
+Denmark,HTX exam result,2022,mean_grade_7point,7.7,https://www.dst.dk/da/Statistik/udgivelser/bagtal/2022-06-30-studenter-karaktergennemsnit,Record high
+Sweden,Grundskola year 9 meritvärde (16 subjects),2009,mean_meritvarde,209.6,https://www.skolverket.se/download/18.6bfaca41169863e6a65883e/1553962027387/pdf2285.pdf,"Skolverket PM 2009 (2008/09); max 320 under the 16-subject count"
+Sweden,Grundskola year 9 meritvärde (17 subjects),2021,mean_meritvarde,232.1,https://www.skolverket.se/download/18.2cb9d0c18340c7dae395d/1664351539747/pdf10334.pdf,"DERIVED: 229.2 + 2.9 (Skolverket PM 2022 says 2022 was 2.9 lower than 2021, the highest since 1998); max 340"
+Sweden,Grundskola year 9 meritvärde (17 subjects),2022,mean_meritvarde,229.2,https://www.skolverket.se/download/18.2cb9d0c18340c7dae395d/1664351539747/pdf10334.pdf,Skolverket PM 2022
+Sweden,Grundskola year 9,2024,share_not_eligible_for_national_programme_pct,16.3,https://skolverket.se/download/18.bcb791419221c6a75313/1727178799386/pdf13149.pdf,"c. 19,900 pupils (Skolverket 2024:2199)"
+Sweden,Gymnasium vocational programmes mean grade points,2022,mean_betygspoang,13.3,https://www.skolverket.se/download/18.24463e0518bfea357e144/1700836581311/pdf12198.pdf,Scale 0-20
+Sweden,Gymnasium vocational programmes mean grade points,2023,mean_betygspoang,13.3,https://www.skolverket.se/download/18.24463e0518bfea357e144/1700836581311/pdf12198.pdf,
+Ireland,Leaving Certificate higher level,2019,share_H4_or_above_pct,62.9,https://www.irishexaminer.com/news/arid-41899174.html,Pre-pandemic baseline
+Ireland,Leaving Certificate higher level,2023,share_H4_or_above_pct,77.2,https://www.irishexaminer.com/news/arid-41899174.html,Peak of grade inflation
+Ireland,Leaving Certificate higher level,2024,share_H4_or_above_pct,74.2,https://www.irishexaminer.com/news/arid-41899174.html,
+Ireland,Leaving Certificate higher level,2024,share_H1_pct,14.3,https://www.leinsterexpress.ie/national/leaving-cert-students-saw-small-decrease-in-grade-inflation-this-year-6766257,SEC figure
+Ireland,Leaving Certificate higher level,2025,share_H1_pct,11.7,https://www.leinsterexpress.ie/national/leaving-cert-students-saw-small-decrease-in-grade-inflation-this-year-6766257,"Pre-pandemic H1 rate c. 5-6% (Laois Nationalist); artificial boost cut from 7.5% to 5.5%"
+Ireland,Leaving Certificate higher level,2026,share_H1_pct,10.1,https://www.irishtimes.com/ireland/education/2026/08/21/leaving-certificate-grade-inflation-down-by-18-this-year/,"Inflation down 1.8 points vs 2025"
+France,Baccalauréat général,1967,share_mention_tres_bien_pct,0.3,https://www.assemblee-nationale.fr/dyn/13/questions/QANR5L13QE75675.pdf,Assemblée nationale written answer
+France,Baccalauréat général,2006,share_mention_tres_bien_pct,4.9,https://www.assemblee-nationale.fr/dyn/13/questions/QANR5L13QE75675.pdf,
+France,Baccalauréat (ministry figures; track not stated in snippet),2021,share_mention_tres_bien_pct,13.6,https://education.gouv.fr/media/133556/download,"TB with or without félicitations; verify track coverage"
+France,Baccalauréat (ministry figures; track not stated in snippet),2022,share_mention_tres_bien_pct,14.2,https://education.gouv.fr/media/133556/download,
+France,Baccalauréat général,2024,share_any_mention_pct,68.4,https://cafepedagogique.net/wp-content/uploads/2025/03/depp-ni-2025-05-199551-1.pdf,DEPP Note d'information 2025-05
+Canada (Ontario),Waterloo Engineering adjustment factor,2018,mean_hs_to_first_year_drop_pct,16.3,https://globalnews.ca/news/4405495/waterloo-engineering-grade-inflation-list/,"Average drop between Ontario high-school admission average and first-year average; FOI list 2018"
