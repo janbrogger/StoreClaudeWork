@@ -1,0 +1,24 @@
+n,date,time_utc,prompt_text
+1,2026-11-02,13:37:20,"This is an empty repository which we will fill. The problem: Norwegian educational authorities want to re-weight the conversion table of the International Baccalaurate Diploma to Norwegian grades. I need sources to investigate whether it is in fact Norwegian (and Western) public school grades that have been inflated, while the International Baccalaureate Diploma grades, which are very exam-based, have remained psychometrically stable by task difficult. I also need time series of the PISA standardized tests for Norway and other countries. You need to create a sources subfolder, which has subfolders. We need to store reports in markdown, and data in CSV format. We will look for sources on grade inflation in norway and elsewhere, and extract the IB statistical bulletin. PISA results have plummeted globally and in Norway. The authorities are apparently blind to the fact that they are treating the Norwegian grades (which are inflated) as a gold standard. The key issue is that the top of the range of IB is down-weighted, so you'd be stupid to do be IB if you want to get into top programmes like clinical medicine.
+
+This conversion table was first proposed in 2022, which was a disaster which gave IB graduates a severe disadvantage. I am a long-term parent of the International School of Bergen, and former and current board member, and former board chair there. I've had two children through that school and then the Bergen Katedralskole diploma with some success. I have two children at the International School of Bergen who are currently only 5 and 8, but need to fight this now. 
+
+The end result will be a data-drive op-ed in Aftenposten or other media, which I will write myself. I need your data gathering and data synthesis abilities. I can also feed you academic papers. Preferably, the one output from your work would be a single pivotal chart showing Norwegian grade inflation vs IB grade stability. 
+
+First, dispatch agents to search online (I opened for vg.no, bt.no, aftenposten.no and the National Library on nb.no, and ibo.org, ssb.org and the udir api's) narrative reviews, in case there are developments or history I missed. Dispatch other agents to retrieve Norwegian educational data and PISA data. Dispatch at least one agent to investigate the psychometric design of the International Baccalaureate Diploma assessment, which I think is done with input from the ISA, the organization that helps design the PISA tests (in Australia?)
+
+There is an organization called NIBS that is spearheading this effort. Link below. Also search for ""Gillian Boniface"" or ""Gillian Mary Boniface"" 
+
+If there's stuff you can't do in your cloud container, I can start a session on my Ubuntu laptop later. 
+
+Here are some initial sources:
+https://www.regjeringen.no/no/aktuelt/ny-omregningstabell-for-ib-karakterer-sendes-pa-horing/id3184606/
+
+https://kommunikasjon.ntb.no/pressemelding/17950602/ny-omregning-for-ib-diplom-vil-gi-likebehandling-ved-opptak-til-hoyere-utdanning?publisherId=9361272
+
+Links to former IB diploma bulletins:
+https://www.ibo.org/about-the-ib/facts-and-figures/statistical-bulletins/diploma-programme-and-career-related-programme-statistical-bulletin/
+
+
+https://ibo.org/globalassets/publications/dpcp-provisional-statistical-bulletin-may-2026_en.pdf 
+https://norwegianibschoolsnibs.org/"

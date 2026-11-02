@@ -1,0 +1,33 @@
+{
+  "session_id": "8679f277-2ab9-5639-a429-facf3bfeb078",
+  "start_utc": "2026-11-02T13:37:20.188Z",
+  "last_event_utc": "2026-11-02T13:58:25.933Z",
+  "span": "21 min",
+  "prompts": 1,
+  "models": [
+    "claude-fable-5-1"
+  ],
+  "tool_use_counts": {
+    "Bash": 34,
+    "WebFetch": 11,
+    "Agent": 7,
+    "Read": 4,
+    "mcp__github__issue_write": 3,
+    "ToolSearch": 2,
+    "WebSearch": 1,
+    "mcp__claude-code-remote__read_documentation": 1,
+    "Skill": 1,
+    "mcp__github__list_issues": 1,
+    "mcp__github__get_label": 1,
+    "SendUserFile": 1
+  },
+  "claude_code_version": "2.1.316",
+  "git_branch": "HEAD",
+  "user": "jan@brogger.no",
+  "source": "claude-code-remote",
+  "topic": "untagged",
+  "transcript_files": [
+    "transcript.jsonl"
+  ],
+  "transcript_bytes": 4744654
+}
